@@ -61,7 +61,7 @@ export const FinancialRecordsProvider = ({
         const newRecord = await response.json();
         setRecords((prev) => [...prev, newRecord]);
       }
-    } catch (err) { /* empty */ }
+    } catch (err) {}
   };
 
   const updateRecord = async (id: string, newRecord: FinancialRecord) => {
@@ -89,7 +89,7 @@ export const FinancialRecordsProvider = ({
           })
         );
       }
-    } catch (err) { /* empty */ }
+    } catch (err) {}
   };
 
   const deleteRecord = async (id: string) => {
@@ -107,7 +107,7 @@ export const FinancialRecordsProvider = ({
           prev.filter((record) => record._id !== deletedRecord._id)
         );
       }
-    } catch (err) { /* empty */ }
+    } catch (err) {}
   };
 
   return (
